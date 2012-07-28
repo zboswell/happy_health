@@ -11,7 +11,39 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120710021719) do
+ActiveRecord::Schema.define(:version => 20120728191753) do
+
+  create_table "forms", :force => true do |t|
+    t.datetime "created_at",                     :null => false
+    t.datetime "updated_at",                     :null => false
+    t.string   "first_name"
+    t.string   "last_name"
+    t.date     "date_of_birth"
+    t.string   "s_s_number"
+    t.string   "gender"
+    t.string   "address1"
+    t.string   "address2"
+    t.string   "city"
+    t.string   "state"
+    t.integer  "zip_code"
+    t.string   "phone_number"
+    t.string   "emergency_contact_name"
+    t.string   "emergency_contact_phone_number"
+    t.string   "emergency_contact_relationship"
+    t.text     "medications"
+    t.text     "allergies"
+    t.string   "doctor_name"
+    t.string   "doctor_phone_number"
+    t.string   "practice_name"
+    t.string   "doctor_address1"
+    t.string   "doctor_address2"
+    t.string   "doctor_city"
+    t.string   "doctor_state"
+    t.integer  "doctor_zip"
+    t.string   "insurance_provider"
+    t.string   "policy_group_number"
+    t.integer  "user_id"
+  end
 
   create_table "microposts", :force => true do |t|
     t.string   "content"

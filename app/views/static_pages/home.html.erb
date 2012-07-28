@@ -1,9 +1,22 @@
 <% if signed_in? %> 
   <div class="row">
-    <aside class="span4">
+    <aside class="span6">
 
       <section>
         <%= render 'shared/user_info' %> 
+      </section>
+       <section>
+      <% if !current_user.form %>
+        <p> Create your registration form by filling in your personal and insurance information to expedite patient check-in.
+        <%= button_to 'Create Registration Form', new_form_path, method: 'get', class: "btn btn-medium btn-primary" %>
+      <% else %>
+        <div class="button-container">
+          <p> Display, edit, or delete your registration form. Your registration form contains your personal and insurance information to expedite patient check-in. </p>
+          <%= button_to 'Display Form', current_user.form, method: 'get', class: "btn btn-medium displayclass" %>
+          <%= button_to 'Edit Form', edit_form_path(current_user.form), class: "btn btn-medium" %>
+          <%= button_to 'Delete', current_user.form, method: :delete, class: "btn btn-medium", data: { confirm: 'Are you sure?' } %>
+        </div>
+      <% end %>
       </section>
       <section>
         <%= render 'shared/stats' %> 
@@ -14,8 +27,8 @@
 
     </aside>
     
-    <div class="span8">
-      <h3>Micropost Feed</h3>
+    <div class="span6">
+      <h3>History of Clinical Summaries:</h3>
       <%= render 'shared/feed' %> 
     </div>
   </div>

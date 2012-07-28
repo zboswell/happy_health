@@ -1,15 +1,4 @@
 <% @user ||= current_user %> 
 <div class="stats">
-  <a href="<%= following_user_path(@user) %>"> 
-    <strong id="following" class="stat">
-      <%= @user.followed_users.count %> 
-    </strong>
-    following
-  </a>
-  <a href="<%= followers_user_path(@user) %>">
-    <strong id="followers" class="stat"> 
-      <%= @user.followers.count %>
-    </strong>
-    followers
-  </a> 
+  <b>Add Clinical Summary</b> – An after-visit summary that provides a patient with relevant and actionable information and instructions containing the patient name, provider’s office contact information, date and location of visit, an updated medication list, updated vitals, reason(s) for visit, procedures and other instructions based on clinical discussions that took place during the office visit, any updates to a problem list, immunizations or medications administered during visit, summary of topics covered/considered during visit, time and location of next appointment/testing if scheduled, or a recommended appointment time if not scheduled, list of other appointments and tests that the patient needs to schedule with contact information, recommended patient decision aids, laboratory and other diagnostic test orders, test/laboratory results (if received before 24 hours after visit), and symptoms.
 </div>

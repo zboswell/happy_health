@@ -69,10 +69,10 @@ p {
 	margin-right: 10px;
 	font-size: 1.7em;
 	color: white;
-	text-transform: uppercase;
+	// text-transform: uppercase;
 	letter-spacing: -1px;
 	padding-top: 9px;
-	font-weight: bold;
+	// font-weight: bold;
 	line-height: 1;
 	&:hover {
 		color: white;
@@ -87,10 +87,14 @@ footer {
 	padding-top: 5px;
 	border-top: 1px solid $grayMediumLight;
 	color: $grayLight;
+  background-color: $gray;
+  clear:both;
 	a {
-		color: $gray;
+		color: white;
+    background-color: black;
+    padding: 6empx;
 		&:hover {
-		color: $grayDarker;
+		color: $grayLight;
 		}
 	}
 	small {
@@ -242,4 +246,16 @@ aside {
     height: 100px;
     margin-bottom: 5px;
 	} 
+}
+
+.button-container {
+  .btn {
+    float: left;
+    margin: 10px;
+  }
+}
+.button-container {
+  .displayclass {
+    margin-top: 18px;
+  }
 }
