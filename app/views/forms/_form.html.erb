@@ -1,0 +1,121 @@
+<%= form_for(@form) do |f| %>
+  <% if @form.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@form.errors.count, "error") %> prohibited this form from being saved:</h2>
+
+      <ul>
+      <% @form.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :date_of_birth %><br />
+    <%= f.date_select :date_of_birth, :start_year => 1900 %>
+  </div>
+  <div class="field">
+    <%= f.label :s_s_number %><br />
+    <%= f.text_field :s_s_number %>
+  </div>
+  <div class="field">
+    <%= f.label :gender %><br />
+    <%= f.text_field :gender %>
+  </div>
+   <div class="field">
+    <%= f.label :address1 %><br />
+    <%= f.text_field :address1 %>
+  </div>
+  <div class="field">
+    <%= f.label :address2 %><br />
+    <%= f.text_field :address2 %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br />
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :state %><br />
+    <%= f.text_field :state %>
+  </div>
+   <div class="field">
+    <%= f.label :zip_code %><br />
+    <%= f.text_field :zip_code %>
+  </div>
+  <div class="field">
+    <%= f.label :phone_number %><br />
+    <%= f.text_field :phone_number %>
+  </div>
+  <div class="field">
+    <%= f.label :emergency_contact_name %><br />
+    <%= f.text_field :emergency_contact_name %>
+  </div>
+  <div class="field">
+    <%= f.label :emergency_contact_phone_number %><br />
+    <%= f.text_field :emergency_contact_phone_number %>
+  </div>
+   <div class="field">
+    <%= f.label :emergency_contact_relationship %><br />
+    <%= f.text_field :emergency_contact_relationship %>
+  </div>
+  <div class="field">
+    <%= f.label :allergies %><br />
+    <%= f.text_field :allergies %>
+  </div>
+  <div class="field">
+    <%= f.label :doctor_name %><br />
+    <%= f.text_field :doctor_name %>
+  </div>
+  <div class="field">
+    <%= f.label :doctor_phone_number %><br />
+    <%= f.text_field :doctor_phone_number %>
+  </div>
+   <div class="field">
+    <%= f.label :practice_name %><br />
+    <%= f.text_field :practice_name %>
+  </div>
+  <div class="field">
+    <%= f.label :doctor_address1 %><br />
+    <%= f.text_field :doctor_address1 %>
+  </div>
+    <div class="field">
+    <%= f.label :doctor_address2 %><br />
+    <%= f.text_field :doctor_address2 %>
+  </div>
+  <div class="field">
+    <%= f.label :doctor_city %><br />
+    <%= f.text_field :doctor_city %>
+  </div>
+  <div class="field">
+    <%= f.label :doctor_state %><br />
+    <%= f.text_field :doctor_state %>
+  </div>
+   <div class="field">
+    <%= f.label :doctor_zip %><br />
+    <%= f.text_field :doctor_zip %>
+  </div>
+  <div class="field">
+    <%= f.label :insurance_provider %><br />
+    <%= f.text_field :insurance_provider %>
+  </div>
+  <div class="field">
+    <%= f.label :policy_group_number %><br />
+    <%= f.text_field :policy_group_number %>
+  </div>
+  <div class="field">
+    <%= f.hidden_field :user_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
